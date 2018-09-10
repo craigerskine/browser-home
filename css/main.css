@@ -1,0 +1,8 @@
+@tailwind preflight;
+@tailwind components;
+
+/* custom */
+
+@tailwind utilities;
+
+@responsive {}
