@@ -57,7 +57,7 @@ gulp.task('html', function(){
 gulp.task('default', function(){
   // $ ./node_modules/.bin/gulp
   browserSync.init({server: { baseDir: "../live/" }});
-  gulp.watch(['css/**/*.css', './tailwind.js', 'index.html'], ['css']);
-  gulp.watch('js/**/*.js', ['js']);
-  gulp.watch('index.html', ['html']);
+  gulp.watch(['css/**/*.css', './tailwind.js', 'index.html'], gulp.series('css'));
+  gulp.watch('js/**/*.js', gulp.series('js'));
+  gulp.watch('index.html', gulp.series('html'));
 });
