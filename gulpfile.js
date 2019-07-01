@@ -12,7 +12,7 @@ let uglify = require('gulp-uglify');
 gulp.task('css', function(){
   return gulp.src('./css/main.css')
     .pipe(postcss([
-      tailwindcss('./tailwind.js'),
+      tailwindcss('./tailwind.config.js'),
     ]))
     .pipe(purgecss({
       content: ['./index.html', './js/*.js'],
@@ -57,7 +57,7 @@ gulp.task('html', function(){
 gulp.task('default', function(){
   // $ ./node_modules/.bin/gulp
   browserSync.init({server: { baseDir: "../live/" }});
-  gulp.watch(['css/**/*.css', './tailwind.js', 'index.html'], gulp.series('css'));
+  gulp.watch(['css/**/*.css', './tailwind.config.js', 'index.html'], gulp.series('css'));
   gulp.watch('js/**/*.js', gulp.series('js'));
   gulp.watch('index.html', gulp.series('html'));
 });

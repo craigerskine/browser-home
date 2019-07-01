@@ -1,8 +1,11 @@
-@tailwind preflight;
+@tailwind base;
 @tailwind components;
-
-/* custom */
-
 @tailwind utilities;
 
-@variants responsive {}
+@responsive {
+  @variants hover, focus {
+    .text-10xl {
+      font-size: 10rem;
+    }
+  }
+}
