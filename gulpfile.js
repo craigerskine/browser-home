@@ -28,7 +28,7 @@ gulp.task('css', function(){
       ]
     }))
     .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
+        overrideBrowserslist: ['last 2 versions'],
         cascade: false
     }))
     .pipe(cleanCSS({compatibility: 'ie8'}))
