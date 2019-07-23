@@ -1,3 +1,5 @@
+var $ = document.querySelectorAll.bind(document);
+
 function time(){
   var date = new Date();
   hours = date.getHours() % 12;
@@ -9,11 +11,11 @@ function time(){
   var beats = Math.abs(((((beatHours * 60) + date.getUTCMinutes()) * 60) + date.getUTCSeconds()) / 86.4).toFixed(2);
   var today = date.toLocaleDateString("en-US", {year: 'numeric', month: 'long', day: 'numeric'});
 
-  document.querySelectorAll('.hours').forEach(function(item){item.innerHTML = hours});
-  document.querySelectorAll('.minutes').forEach(function(item){item.innerHTML = minutes});
-  document.querySelectorAll('.seconds').forEach(function(item){item.innerHTML = seconds});
-  document.querySelectorAll('.beats').forEach(function(item){item.innerHTML = beats});
-  document.querySelectorAll('.date').forEach(function(item){item.innerHTML = today})
+  $('.hours').forEach(function(item){item.innerHTML = hours});
+  $('.minutes').forEach(function(item){item.innerHTML = minutes});
+  $('.seconds').forEach(function(item){item.innerHTML = seconds});
+  $('.beats').forEach(function(item){item.innerHTML = beats});
+  $('.date').forEach(function(item){item.innerHTML = today})
 }
 
 function pad(num){
