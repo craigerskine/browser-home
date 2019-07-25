@@ -2,7 +2,7 @@
 
 ![home](https://cdn.dribbble.com/users/2855/screenshots/5157095/attachments/1134257/home.png)
 
-Simple browser home page/new tab page. Uses tailwindcss and moment.js
+Simple browser home page/new tab page. Uses tailwindcss and vanilla JS
 
 ### Requirements
 
