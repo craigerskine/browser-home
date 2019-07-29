@@ -8,6 +8,8 @@ let cleanCSS = require('gulp-clean-css');
 let concat = require('gulp-concat');
 let rename = require('gulp-rename');
 let uglify = require('gulp-uglify');
+let hash = require('gulp-hash');
+let references = require('gulp-hash-references');
 
 gulp.task('css', function(){
   return gulp.src('./css/main.css')
@@ -32,24 +34,35 @@ gulp.task('css', function(){
         cascade: false
     }))
     .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(hash())
     .pipe(gulp.dest('../live/css/'))
+    .pipe(hash.manifest('asset-manifest.json', {
+      deleteOld: true,
+      sourceDir: '../live/css/'
+    }))
+    .pipe(gulp.dest('.'))
     .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('js', function(){
   return gulp.src([
-    './js/jquery.js',
-    './js/plugins.js',
     './js/main.js'
   ])
   .pipe(concat('main.js'))
   .pipe(uglify())
+  .pipe(hash())
   .pipe(gulp.dest('../live/js/'))
+  .pipe(hash.manifest('asset-manifest.json', {
+    deleteOld: true,
+    sourceDir: '../live/js/'
+  }))
+  .pipe(gulp.dest('.'))
   .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('html', function(){
   return gulp.src('./index.html')
+  .pipe(references('asset-manifest.json'))
   .pipe(gulp.dest('../live/'))
   .pipe(browserSync.reload({stream:true}));
 });

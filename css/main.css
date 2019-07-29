@@ -4,8 +4,10 @@
 
 @responsive {
   @variants hover, focus {
-    .text-10xl {
-      font-size: 10rem;
-    }
+    .text-7xl { font-size: 7rem; }
+    .text-8xl { font-size: 8rem; }
+    .text-9xl { font-size: 9rem; }
+    .text-10xl { font-size: 10rem; }
+    .transition { transition: all .25s; }
   }
 }

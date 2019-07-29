@@ -5,13 +5,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <title>Currently</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,400,500,700" rel="stylesheet" />
   <link href="css/main.css" rel="stylesheet" />
 </head>
-<body class="lg:px-32 bg-gray-900 text-gray-500 font-mono text-center">
+<body class="lg:px-32 bg-gray-900 text-gray-600 font-mono text-center">
 
-  <div class="w-full h-screen flex items-center">
-    <div class="date-time mx-auto w-4/5">
+  <div class="w-full h-screen flex flex-col items-center justify-center">
+
       <h1 class="time p-4 w-full text-5xl lg:text-10xl leading-none flex items-center justify-between">
         <b class="hours font-hairline flex-1">&nbsp;</b>
         <i class="not-italic text-sm lg:text-5xl opacity-25">:</i>
@@ -19,9 +19,48 @@
         <i class="not-italic text-sm lg:text-5xl opacity-25">:</i>
         <b class="seconds font-hairline flex-1">&nbsp;</b>
       </h1>
-      <h2 class="p-4 text-lg text-gray-600 tracking-wide font-bold" title="Beat: Swatch Internet Time"><b class="text-red-600 opacity-50">@</b><i class="beats not-italic">&nbsp;</i></h2>
+
+      <div class="binary p-4 w-full max-w-sm flex">
+        <ul class="hour-1 mx-1 pt-2 flex-1 flex flex-col justify-end">
+          <li class="tick hrs-1-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick hrs-1-1 w-full h-1 bg-gray-800 rounded transition"></li>
+        </ul>
+        <ul class="hour-2 mx-1 pt-2 flex-1 flex flex-col justify-end">
+          <li class="tick hrs-2-8 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick hrs-2-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick hrs-2-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick hrs-2-1 w-full h-1 bg-gray-800 rounded transition"></li>
+        </ul>
+        <ul class="minute-1 mx-1 pt-2 flex-1 flex flex-col justify-end">
+          <li class="tick min-1-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick min-1-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick min-1-1 w-full h-1 bg-gray-800 rounded transition"></li>
+        </ul>
+        <ul class="minute-2 mx-1 pt-2 flex-1 flex flex-col justify-end">
+          <li class="tick min-2-8 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick min-2-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick min-2-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick min-2-1 w-full h-1 bg-gray-800 rounded transition"></li>
+        </ul>
+        <ul class="second-1 mx-1 pt-2 flex-1 flex flex-col justify-end">
+          <li class="tick sec-1-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick sec-1-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick sec-1-1 w-full h-1 bg-gray-800 rounded transition"></li>
+        </ul>
+        <ul class="second-2 mx-1 pt-2 flex-1 flex flex-col justify-end">
+          <li class="tick sec-2-8 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick sec-2-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick sec-2-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
+          <li class="tick sec-2-1 w-full h-1 bg-gray-800 rounded transition"></li>
+        </ul>
+      </div>
+
+      <h2 class="internet p-4 md:text-4xl opacity-50">
+        <small class="text-red-800 font-bold">@</small><b class="beats font-normal">&nbsp;</b>
+      </h2>
+
       <h3 class="date p-4 md:text-2xl font-normal opacity-25">&nbsp;</h3>
-    </div>
+
   </div>
 
   <script src="js/main.js"></script>
