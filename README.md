@@ -1,6 +1,6 @@
 # browser-home
 
-![home](https://cdn.dribbble.com/users/2855/screenshots/5157095/attachments/1134257/home.png)
+![home](screenshot.png)
 
 Simple browser home page/new tab page. Uses tailwindcss and vanilla JS
 
