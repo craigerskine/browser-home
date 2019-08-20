@@ -13,14 +13,58 @@
   <div class="w-full h-screen flex flex-col items-center justify-center">
 
       <h1 class="time p-4 w-full text-5xl lg:text-10xl leading-none flex items-center justify-between">
-        <b class="hours font-hairline flex-1">&nbsp;</b>
+        <b class="font-hairline flex-1">
+          <i class="hours not-italic"></i>
+          <b class="py-4 flex justify-center">
+            <b class="hour-1 mx-3 pt-2 w-10 flex flex-col justify-end">
+              <b class="tick hrs-1-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick hrs-1-1 w-full h-1 bg-gray-800 rounded transition"></b>
+            </b>
+            <b class="hour-2 mx-3 pt-2 w-10 flex flex-col justify-end">
+              <b class="tick hrs-2-8 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick hrs-2-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick hrs-2-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick hrs-2-1 w-full h-1 bg-gray-800 rounded transition"></b>
+            </b>
+          </b>
+        </b>
         <i class="not-italic text-sm lg:text-5xl opacity-25">:</i>
-        <b class="minutes font-hairline flex-1">&nbsp;</b>
+        <b class="font-hairline flex-1">
+          <i class="minutes not-italic"></i>
+          <b class="py-4 flex justify-center">
+            <b class="minute-1 mx-3 pt-2 w-10 flex flex-col justify-end">
+              <b class="tick min-1-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick min-1-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick min-1-1 w-full h-1 bg-gray-800 rounded transition"></b>
+            </b>
+            <b class="minute-2 mx-3 pt-2 w-10 flex flex-col justify-end">
+              <b class="tick min-2-8 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick min-2-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick min-2-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick min-2-1 w-full h-1 bg-gray-800 rounded transition"></b>
+            </b>
+          </b>
+        </b>
         <i class="not-italic text-sm lg:text-5xl opacity-25">:</i>
-        <b class="seconds font-hairline flex-1">&nbsp;</b>
+        <b class="font-hairline flex-1">
+          <i class="seconds not-italic"></i>
+          <b class="py-4 flex justify-center">
+            <b class="second-1 mx-3 pt-2 w-10 flex flex-col justify-end">
+              <b class="tick sec-1-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick sec-1-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick sec-1-1 w-full h-1 bg-gray-800 rounded transition"></b>
+            </b>
+            <b class="second-2 mx-3 pt-2 w-10 flex flex-col justify-end">
+              <b class="tick sec-2-8 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick sec-2-4 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick sec-2-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></b>
+              <b class="tick sec-2-1 w-full h-1 bg-gray-800 rounded transition"></b>
+            </b>
+          </b>
+        </b>
       </h1>
 
-      <div class="binary p-4 lg:py-24 w-full max-w-xs lg:max-w-sm flex" title="Binary Time">
+      <!-- <div class="binary p-4 lg:py-24 w-full max-w-xs lg:max-w-sm flex" title="Binary Time">
         <ul class="hour-1 mx-1 pt-2 flex-1 flex flex-col justify-end">
           <li class="tick hrs-1-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
           <li class="tick hrs-1-1 w-full h-1 bg-gray-800 rounded transition"></li>
@@ -53,7 +97,7 @@
           <li class="tick sec-2-2 mb-2 w-full h-1 bg-gray-800 rounded transition"></li>
           <li class="tick sec-2-1 w-full h-1 bg-gray-800 rounded transition"></li>
         </ul>
-      </div>
+      </div> -->
 
       <h2 class="internet p-4 md:text-4xl opacity-50 hover:opacity-100 transition" title="Internet/Beat Time">
         <small class="text-red-800 font-bold">@</small><b class="beats font-light">&nbsp;</b>
