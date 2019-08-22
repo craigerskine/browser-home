@@ -71,6 +71,6 @@ gulp.task('default', function(){
   // $ ./node_modules/.bin/gulp
   browserSync.init({server: { baseDir: "../live/" }});
   gulp.watch(['css/**/*.css', './tailwind.config.js', 'index.html'], gulp.series('css'));
-  gulp.watch('js/**/*.js', gulp.series('js'));
+  gulp.watch('js/**/*.js', gulp.series('js', 'css'));
   gulp.watch(['index.html', 'asset-manifest.json'], gulp.series('html'));
 });

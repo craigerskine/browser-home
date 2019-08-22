@@ -40,56 +40,58 @@ function pad(num){
 }
 
 var binary = function(n,t) {
+  onClass = 'bg-blue-500';
+  offClass = 'bg-gray-800';
   if(n == 1) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
   } else if(n == 2) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
   } else if(n == 3) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
   } else if(n == 4) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
   } else if(n == 5) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
   } else if(n == 6) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
   } else if(n == 7) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
   } else if(n == 8) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
   } else if(n == 9) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-600'); item.classList.remove('bg-gray-800')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(onClass); item.classList.remove(offClass)});
   } else {
-    $('.'+t+'-1').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-2').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-4').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
-    $('.'+t+'-8').forEach(function(item){item.classList.add('bg-gray-800'); item.classList.remove('bg-gray-600')});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(offClass); item.classList.remove(onClass)});
   };
 };
 
