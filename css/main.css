@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (prefers-color-scheme: light) {
+  body.bg-gray-900 { @apply .bg-gray-100; }
+  .tick.bg-gray-800 { @apply .bg-gray-300; }
+}
+
 @responsive {
   @variants hover, focus {
     .text-7xl { font-size: 7rem; }
