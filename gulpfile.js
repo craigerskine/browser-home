@@ -18,16 +18,8 @@ gulp.task('css', function(){
     ]))
     .pipe(purgecss({
       content: ['./index.html', './js/*.js'],
-      extractors: [
-        {
-          extractor: class TailwindExtractor {
-            static extract(content) {
-              return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-            }
-          },
-          extensions: ['html', 'js']
-        }
-      ]
+      defaultExtractor: content =>
+        content.match(/[\w-/:]+(?<!:)/g) || []
     }))
     .pipe(autoprefixer({
         overrideBrowserslist: ['last 2 versions'],
