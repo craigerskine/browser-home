@@ -35,8 +35,6 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-package-lock.json
-asset-manifest.json
 
 # TypeScript v1 declaration files
 typings/
@@ -61,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+# Extras
+.DS_Store
+node_modules
+dist/
+asset-manifest.json
+package-lock.json
