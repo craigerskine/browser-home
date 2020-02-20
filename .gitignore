@@ -66,3 +66,4 @@ node_modules
 dist/
 asset-manifest.json
 package-lock.json
+_dropbox_node_prep.scpt
