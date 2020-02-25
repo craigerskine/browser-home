@@ -1,5 +1,14 @@
 @tailwind base;
 @tailwind components;
+
+.tick.bg-blue-500 { animation: .5s tick; }
+
+@keyframes tick {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
 @tailwind utilities;
 
 @media (prefers-color-scheme: light) {
@@ -7,12 +16,11 @@
   .tick.bg-gray-800 { @apply .bg-gray-300; }
 }
 
-@responsive {
-  @variants hover, focus {
-    .text-7xl { font-size: 7rem; }
-    .text-8xl { font-size: 8rem; }
-    .text-9xl { font-size: 9rem; }
-    .text-10xl { font-size: 10rem; }
-    .transition { transition: all .25s; }
-  }
+@variants responsive, hover, focus {
+  .text-7xl { font-size: 7rem; }
+  .text-8xl { font-size: 8rem; }
+  .text-9xl { font-size: 9rem; }
+  .text-10xl { font-size: 10rem; }
+  .transition { transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform; }
+  .duration-75  { transition-duration: 75ms; }
 }
