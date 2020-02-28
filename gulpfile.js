@@ -7,7 +7,7 @@ let autoprefixer = require('gulp-autoprefixer');
 let cleanCSS = require('gulp-clean-css');
 let concat = require('gulp-concat');
 let rename = require('gulp-rename');
-let uglify = require('gulp-uglify');
+let uglify = require('gulp-uglify-es').default;
 let hash = require('gulp-hash');
 let references = require('gulp-hash-references');
 

@@ -20,7 +20,7 @@
     "gulp-postcss": "*",
     "gulp-purgecss": "*",
     "gulp-rename": "*",
-    "gulp-uglify": "*",
+    "gulp-uglify-es": "*",
     "postcss": "*",
     "tailwindcss": "*"
   }

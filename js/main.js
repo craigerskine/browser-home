@@ -40,58 +40,58 @@ function pad(num){
 }
 
 var binary = function(n,t) {
-  tickOn = 'bg-blue-500';
-  tickOff = 'bg-gray-800';
+  const tickOn = ['bg-blue-500', 'on'];
+  const tickOff = ['bg-gray-800'];
   if(n == 1) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
   } else if(n == 2) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
   } else if(n == 3) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
   } else if(n == 4) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
   } else if(n == 5) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
   } else if(n == 6) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
   } else if(n == 7) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
   } else if(n == 8) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
   } else if(n == 9) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOn); item.classList.remove(tickOff)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
   } else {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(tickOff); item.classList.remove(tickOn)});
+    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
   };
 };
 

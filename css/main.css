@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 
-.tick.bg-blue-500 { animation: .5s tick; }
+.tick.on { animation: .5s tick; }
 
 @keyframes tick {
   0% { transform: scale(1); }
