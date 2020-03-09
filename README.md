@@ -9,6 +9,7 @@ Simple browser home page/new tab page. Uses [tailwindcss](https://github.com/tai
 * Binary clock
 * Beat Internet clock
 * Today's date
+* Obeys OS UI Light/Dark mode
 
 ### Requirements
 
