@@ -10,13 +10,16 @@ function now(){
   var seconds = date.getSeconds();
   var beatHours = (date.getUTCHours() == 23) ? 0 : date.getUTCHours() + 1;
   var beats = Math.abs(((((beatHours * 60) + date.getUTCMinutes()) * 60) + date.getUTCSeconds()) / 86.4).toFixed(2);
-  var today = date.toLocaleDateString("en-US", {year: 'numeric', month: 'long', day: 'numeric'});
 
   $('.hours').forEach(function(item){item.innerHTML = pad(hours)});
   $('.minutes').forEach(function(item){item.innerHTML = pad(minutes)});
   $('.seconds').forEach(function(item){item.innerHTML = pad(seconds)});
   $('.beats').forEach(function(item){item.innerHTML = beats});
-  $('.date').forEach(function(item){item.innerHTML = today});
+  $('.date-m').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {month: '2-digit'})});
+  $('.date-mm').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {month: 'short'})});
+  $('.date-d').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {day: '2-digit'})});
+  $('.date-dd').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {weekday: 'short'})});
+  $('.date-y').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {year: 'numeric'})});
 
   // binary
   var sec2 = seconds % 10;
