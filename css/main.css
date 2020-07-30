@@ -14,6 +14,7 @@
 @media (prefers-color-scheme: light) {
   body.bg-gray-900 { @apply .bg-gray-100; }
   .tick.bg-gray-800 { @apply .bg-gray-300; }
+  .border-gray-800 { @apply .border-gray-400; }
 }
 
 @variants responsive, hover, focus {
