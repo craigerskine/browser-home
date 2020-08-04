@@ -1,4 +1,8 @@
-var $ = document.querySelectorAll.bind(document);
+// jquery-like selector
+window.$_ = function(selector, next) {
+  var selectors = document.querySelectorAll(selector);
+  [].forEach.call(selectors, next);
+};
 
 function now(){
   var date = new Date();
@@ -11,15 +15,15 @@ function now(){
   var beatHours = (date.getUTCHours() == 23) ? 0 : date.getUTCHours() + 1;
   var beats = Math.abs(((((beatHours * 60) + date.getUTCMinutes()) * 60) + date.getUTCSeconds()) / 86.4).toFixed(2);
 
-  $('.hours').forEach(function(item){item.innerHTML = pad(hours)});
-  $('.minutes').forEach(function(item){item.innerHTML = pad(minutes)});
-  $('.seconds').forEach(function(item){item.innerHTML = pad(seconds)});
-  $('.beats').forEach(function(item){item.innerHTML = beats});
-  $('.date-m').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {month: '2-digit'})});
-  $('.date-mm').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {month: 'short'})});
-  $('.date-d').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {day: '2-digit'})});
-  $('.date-dd').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {weekday: 'short'})});
-  $('.date-y').forEach(function(item){item.innerHTML = date.toLocaleDateString("en-US", {year: 'numeric'})});
+  $_('.hours', function(e){e.innerHTML = pad(hours)});
+  $_('.minutes', function(e){e.innerHTML = pad(minutes)});
+  $_('.seconds', function(e){e.innerHTML = pad(seconds)});
+  $_('.beats', function(e){e.innerHTML = beats});
+  $_('.date-m', function(e){e.innerHTML = date.toLocaleDateString("en-US", {month: '2-digit'})});
+  $_('.date-mm', function(e){e.innerHTML = date.toLocaleDateString("en-US", {month: 'short'})});
+  $_('.date-d', function(e){e.innerHTML = date.toLocaleDateString("en-US", {day: '2-digit'})});
+  $_('.date-dd', function(e){e.innerHTML = date.toLocaleDateString("en-US", {weekday: 'short'})});
+  $_('.date-y', function(e){e.innerHTML = date.toLocaleDateString("en-US", {year: 'numeric'})});
 
   // binary
   var sec2 = seconds % 10;
@@ -46,55 +50,55 @@ var binary = function(n,t) {
   const tickOn = ['bg-blue-500', 'on'];
   const tickOff = ['bg-gray-800'];
   if(n == 1) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
   } else if(n == 2) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
   } else if(n == 3) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
   } else if(n == 4) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
   } else if(n == 5) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
   } else if(n == 6) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
   } else if(n == 7) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
   } else if(n == 8) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
   } else if(n == 9) {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOn); item.classList.remove(...tickOff)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
   } else {
-    $('.'+t+'-1').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-2').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-4').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
-    $('.'+t+'-8').forEach(function(item){item.classList.add(...tickOff); item.classList.remove(...tickOn)});
+    $_('.'+t+'-1', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-2', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-4', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
+    $_('.'+t+'-8', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
   };
 };
 

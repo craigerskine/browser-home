@@ -1,11 +1,11 @@
 @tailwind base;
 @tailwind components;
 
-.tick.on { animation: .5s tick; }
+.tick.on { animation: .33s tick; }
 
 @keyframes tick {
   0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+  50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
 
@@ -22,6 +22,4 @@
   .text-8xl { font-size: 8rem; }
   .text-9xl { font-size: 9rem; }
   .text-10xl { font-size: 10rem; }
-  .transition { transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform; }
-  .duration-75  { transition-duration: 75ms; }
 }
