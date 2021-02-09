@@ -25,6 +25,6 @@ Simple browser home page/new tab page. Uses [tailwindcss](https://github.com/tai
 
 `./node_modules/.bin/gulp`
 
-A browser window will open and the changes you make in the `css`, `js`, `index.html`, `tailwind.config.js`, etc. will auto reload the browser instance.
+Make your changes to `css`, `js`, `index.html`, `tailwind.config.js`, etc.
 
 Upload the contents of the `live` folder to your web host for your own personal version.
