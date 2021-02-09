@@ -48,7 +48,7 @@ function pad(num){
 
 var binary = function(n,t) {
   const tickOn = ['bg-blue-500', 'on'];
-  const tickOff = ['bg-gray-800'];
+  const tickOff = ['bg-gray-500', 'bg-opacity-25'];
   if(n == 1) {
     $_('.'+t+'-1', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
     $_('.'+t+'-2', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});

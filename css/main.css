@@ -11,15 +11,5 @@
 
 @tailwind utilities;
 
-@media (prefers-color-scheme: light) {
-  body.bg-gray-900 { @apply .bg-gray-100; }
-  .tick.bg-gray-800 { @apply .bg-gray-300; }
-  .border-gray-800 { @apply .border-gray-400; }
-}
-
-@variants responsive, hover, focus {
-  .text-7xl { font-size: 7rem; }
-  .text-8xl { font-size: 8rem; }
-  .text-9xl { font-size: 9rem; }
-  .text-10xl { font-size: 10rem; }
+@variants responsive {
 }

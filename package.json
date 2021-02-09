@@ -1,27 +1,22 @@
 {
   "name": "home-qrayg-com",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "home page",
   "main": "index.html",
   "scripts": {
-    "postinstall": "./node_modules/.bin/gulp html && ./node_modules/.bin/gulp css && ./node_modules/.bin/gulp js",
     "update:packages": "node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
   },
   "author": "Craig Erskine",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "*",
+    "autoprefixer": "*",
     "gulp": "*",
-    "gulp-autoprefixer": "*",
     "gulp-clean-css": "*",
     "gulp-concat": "*",
     "gulp-hash": "*",
     "gulp-hash-references": "*",
     "gulp-postcss": "*",
-    "gulp-purgecss": "*",
     "gulp-rename": "*",
-    "gulp-uglify-es": "*",
-    "postcss": "*",
     "tailwindcss": "*"
   }
 }

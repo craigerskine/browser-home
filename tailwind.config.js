@@ -1,19 +1,19 @@
-// tailwind.config.js
+const colors = require('tailwindcss/colors')
 module.exports = {
+  darkMode: 'media',
+  purge: {
+    enabled: true,
+    layers: ['utilities'],
+    content: [
+      './css/**/*.css',
+      './js/**/*.js',
+      './index.html',
+    ],
+  },
   theme: {
     extend: {
       colors: {
-        gray: {
-          100: '#F8FAFB',
-          200: '#EFF2F4',
-          300: '#E5E8EC',
-          400: '#CFD4DA',
-          500: '#A6ADB6',
-          600: '#787F8A',
-          700: '#4F555E',
-          800: '#32373F',
-          900: '#1D2026',
-        },
+        gray: colors.gray,
       },
       fontFamily: {
         mono: [
@@ -26,8 +26,14 @@ module.exports = {
           'monospace',
         ],
       },
+      fontSize: {
+        '7xl': ['7rem', { lineHeight: '1' }],
+        '8xl': ['8rem', { lineHeight: '1' }],
+        '9xl': ['9rem', { lineHeight: '1' }],
+        '10xl': ['10rem', { lineHeight: '1' }],
+      },
     },
   },
-  variants: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
+  variants: ['dark', 'responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'active'],
   plugins: [],
 }
