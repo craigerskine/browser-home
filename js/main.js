@@ -12,12 +12,14 @@ function now(){
   hours = hours ? hours : 12;
   var minutes = date.getMinutes();
   var seconds = date.getSeconds();
+  var milliseconds = (date.getMilliseconds()/10).toFixed(0);
   var beatHours = (date.getUTCHours() == 23) ? 0 : date.getUTCHours() + 1;
   var beats = Math.abs(((((beatHours * 60) + date.getUTCMinutes()) * 60) + date.getUTCSeconds()) / 86.4).toFixed(2);
 
   $_('.hours', function(e){e.innerHTML = pad(hours)});
   $_('.minutes', function(e){e.innerHTML = pad(minutes)});
   $_('.seconds', function(e){e.innerHTML = pad(seconds)});
+  $_('.milliseconds', function(e){e.innerHTML = pad(milliseconds)});
   $_('.beats', function(e){e.innerHTML = beats});
   $_('.date-m', function(e){e.innerHTML = date.toLocaleDateString("en-US", {month: '2-digit'})});
   $_('.date-mm', function(e){e.innerHTML = date.toLocaleDateString("en-US", {month: 'short'})});
@@ -47,7 +49,7 @@ function pad(num){
 }
 
 var binary = function(n,t) {
-  const tickOn = ['bg-blue-500', 'on'];
+  const tickOn = ['bg-blue-400', 'on'];
   const tickOff = ['bg-gray-500', 'bg-opacity-25'];
   if(n == 1) {
     $_('.'+t+'-1', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
@@ -103,4 +105,4 @@ var binary = function(n,t) {
 };
 
 now();
-setInterval(now, 100);
+setInterval(now, 1);

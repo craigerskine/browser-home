@@ -18,6 +18,7 @@
           <span class="hours"></span>
           <span class="minutes"></span>
           <span class="seconds"></span>
+          <!-- <span class="milliseconds"></span> -->
         </h1>
         <ul class="binary py-8 px-4 w-full flex justify-evenly">
           <li class="flex items-end justify-center">
@@ -61,26 +62,26 @@
       </div>
     </section>
     <section class="w-full">
-      <ul class="text-sm lg:text-2xl font-bold opacity-75">
+      <ul class="text-sm lg:text-2xl font-bold">
         <li class="p-4 lg:p-8 hover:text-white lg:text-5xl opacity-75 transition duration-75" title="Internet/Beat Time">
           <div class="internet flex items-center justify-center">
-            <small class="mr-1 text-red-500 opacity-75">@</small>
+            <small class="mr-1 text-blue-400 opacity-75">@</small>
             <b class="beats">&nbsp;</b>
           </div>
         </li>
-        <li>
+        <li class="hover:text-white opacity-75 transition duration-75">
           <ul class="date flex">
-            <li class="p-4 xl:p-8 flex-1 flex items-center justify-center hover:text-white transition duration-75" title="Month">
+            <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Month">
               <b class="date-m">&nbsp;</b>
-              <sup class="date-mm ml-2 text-red-500 text-xs opacity-75">&nbsp;</sup>
+              <sup class="date-mm ml-2 text-blue-400 text-xs opacity-75">&nbsp;</sup>
             </li>
-            <li class="p-4 xl:p-8 flex-1 flex items-center justify-center hover:text-white transition duration-75" title="Day">
+            <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Day">
               <b class="date-d">&nbsp;</b>
-              <sup class="date-dd ml-2 text-red-500 text-xs opacity-75">&nbsp;</sup>
+              <sup class="date-dd ml-2 text-blue-400 text-xs opacity-75">&nbsp;</sup>
             </li>
-            <li class="p-4 xl:p-8 flex-1 flex items-center justify-center hover:text-white transition duration-75" title="Year">
+            <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Year">
               <b class="date-y">&nbsp;</b>
-              <sup class="date-yy ml-2 text-red-500 text-xs opacity-75">AD</sup>
+              <sup class="date-yy ml-2 text-blue-400 text-xs opacity-75">AD</sup>
             </li>
           </ul>
         </li>
