@@ -11,77 +11,77 @@
 </head>
 <body class="dark:bg-gradient-to-b from-gray-800 via-transparent to-black bg-gray-200 dark:bg-black bg-opacity-25 bg-fixed text-gray-600 font-mono font-hairline text-center">
 
-  <main class="w-full h-screen flex flex-col">
-    <section class="w-full flex-1 flex">
+  <main class="w-full h-screen flex flex-col items-center justify-center">
+    <section class="w-full max-w-screen-xl flex">
       <div class="m-auto p-4 w-full">
-        <h1 class="time p-4 w-full text-5xl lg:text-10xl leading-none flex items-center justify-evenly">
-          <span class="hours"></span>
-          <span class="minutes"></span>
-          <span class="seconds"></span>
-          <!-- <span class="milliseconds"></span> -->
+        <h1 class="time p-4 w-full text-5xl lg:text-10xl leading-none flex items-center justify-between">
+          <span class="hours w-64 text-center"></span>
+          <span class="minutes w-64 text-center"></span>
+          <span class="seconds w-64 text-center"></span>
+          <!-- <span class="milliseconds w-64 text-center"></span> -->
         </h1>
-        <ul class="binary py-8 px-4 w-full flex justify-evenly">
-          <li class="flex items-end justify-center">
-            <ul class="hour-1 mx-1 lg:mx-8 w-4 lg:w-10 flex flex-col">
-              <li class="tick hrs-1-1 w-full h-px lg:h-1 transition duration-75"></li>
+        <ul class="binary py-8 px-4 w-full flex justify-between">
+          <li class="px-2 lg:px-8 w-full lg:w-64 flex items-end justify-center">
+            <ul class="hour-1 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
+              <li class="tick hrs-1-1 w-full h-1 transition duration-75"></li>
             </ul>
-            <ul class="hour-2 mx-1 lg:mx-8 w-4 lg:w-10 flex flex-col">
-              <li class="tick hrs-2-8 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick hrs-2-4 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick hrs-2-2 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick hrs-2-1 w-full h-px lg:h-1 transition duration-75"></li>
-            </ul>
-          </li>
-          <li class="flex items-end justify-center">
-            <ul class="minute-1 mx-1 lg:mx-8 w-4 lg:w-10 flex flex-col">
-              <li class="tick min-1-4 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick min-1-2 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick min-1-1 w-full h-px lg:h-1 transition duration-75"></li>
-            </ul>
-            <ul class="minute-2 mx-1 lg:mx-8 w-4 lg:w-10 flex flex-col">
-              <li class="tick min-2-8 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick min-2-4 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick min-2-2 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick min-2-1 w-full h-px lg:h-1 transition duration-75"></li>
+            <ul class="hour-2 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
+              <li class="tick hrs-2-8 w-full h-1 transition duration-75"></li>
+              <li class="tick hrs-2-4 w-full h-1 transition duration-75"></li>
+              <li class="tick hrs-2-2 w-full h-1 transition duration-75"></li>
+              <li class="tick hrs-2-1 w-full h-1 transition duration-75"></li>
             </ul>
           </li>
-          <li class="flex items-end justify-center">
-            <ul class="second-1 mx-1 lg:mx-8 w-4 lg:w-10 flex flex-col">
-              <li class="tick sec-1-4 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick sec-1-2 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick sec-1-1 w-full h-px lg:h-1 transition duration-75"></li>
+          <li class="px-2 lg:px-8 w-full lg:w-64 flex items-end justify-center">
+            <ul class="minute-1 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
+              <li class="tick min-1-4 w-full h-1 transition duration-75"></li>
+              <li class="tick min-1-2 w-full h-1 transition duration-75"></li>
+              <li class="tick min-1-1 w-full h-1 transition duration-75"></li>
             </ul>
-            <ul class="second-2 mx-1 lg:mx-8 w-4 lg:w-10 flex flex-col">
-              <li class="tick sec-2-8 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick sec-2-4 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick sec-2-2 mb-1 lg:mb-2 w-full h-px lg:h-1 transition duration-75"></li>
-              <li class="tick sec-2-1 w-full h-px lg:h-1 transition duration-75"></li>
+            <ul class="minute-2 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
+              <li class="tick min-2-8 w-full h-1 transition duration-75"></li>
+              <li class="tick min-2-4 w-full h-1 transition duration-75"></li>
+              <li class="tick min-2-2 w-full h-1 transition duration-75"></li>
+              <li class="tick min-2-1 w-full h-1 transition duration-75"></li>
+            </ul>
+          </li>
+          <li class="px-2 lg:px-8 w-full lg:w-64 flex items-end justify-center">
+            <ul class="second-1 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
+              <li class="tick sec-1-4 w-full h-1 transition duration-75"></li>
+              <li class="tick sec-1-2 w-full h-1 transition duration-75"></li>
+              <li class="tick sec-1-1 w-full h-1 transition duration-75"></li>
+            </ul>
+            <ul class="second-2 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
+              <li class="tick sec-2-8 w-full h-1 transition duration-75"></li>
+              <li class="tick sec-2-4 w-full h-1 transition duration-75"></li>
+              <li class="tick sec-2-2 w-full h-1 transition duration-75"></li>
+              <li class="tick sec-2-1 w-full h-1 transition duration-75"></li>
             </ul>
           </li>
         </ul>
       </div>
     </section>
-    <section class="w-full">
-      <ul class="text-sm lg:text-2xl font-bold">
-        <li class="p-4 lg:p-8 hover:text-white lg:text-5xl opacity-75 transition duration-75" title="Internet/Beat Time">
-          <div class="internet flex items-center justify-center">
-            <small class="mr-1 text-blue-400 opacity-75">@</small>
+    <section class="mx-auto w-full max-w-screen-xl text-gray-700">
+      <ul class="py-12 lg:text-4xl font-bold flex items-center">
+        <li class="pl-12 hover:text-white opacity-75 transition duration-300" title="Internet/Beat Time">
+          <div class="internet pl-5 flex items-center justify-center">
+            <small class="mr-1 text-blue-400 text-lg">@</small>
             <b class="beats">&nbsp;</b>
           </div>
         </li>
-        <li class="hover:text-white opacity-75 transition duration-75">
-          <ul class="date flex">
+        <li class="ml-auto pr-12 hover:text-white transition duration-300">
+          <ul class="date pr-5 flex">
             <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Month">
               <b class="date-m">&nbsp;</b>
-              <sup class="date-mm ml-2 text-blue-400 text-xs opacity-75">&nbsp;</sup>
+              <sup class="date-mm ml-2 text-blue-400 text-xs">&nbsp;</sup>
             </li>
             <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Day">
               <b class="date-d">&nbsp;</b>
-              <sup class="date-dd ml-2 text-blue-400 text-xs opacity-75">&nbsp;</sup>
+              <sup class="date-dd ml-2 text-blue-400 text-xs">&nbsp;</sup>
             </li>
             <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Year">
               <b class="date-y">&nbsp;</b>
-              <sup class="date-yy ml-2 text-blue-400 text-xs opacity-75">AD</sup>
+              <sup class="date-yy ml-2 text-blue-400 text-xs">AD</sup>
             </li>
           </ul>
         </li>
