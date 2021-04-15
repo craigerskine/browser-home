@@ -2,7 +2,7 @@
 
 ![home](screenshot.png)
 
-Simple browser home page/new tab page. Uses [tailwindcss](https://github.com/tailwindcss/tailwindcss), [Twind](https://twind.dev) and vanilla JS.
+Simple browser home page/new tab page. Uses [tailwindcss](https://github.com/tailwindcss/tailwindcss), [Twind](https://twind.dev), and vanilla JS.
 
 **Features:**
 * 12 hour clock
