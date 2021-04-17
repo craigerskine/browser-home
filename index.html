@@ -1,6 +1,5 @@
-
 <!doctype html>
-<html lang="en" class="dark:bg-gray-900 bg-fixed" hidden>
+<html lang="en" class="dark:bg-black bg-fixed" hidden>
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -8,15 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;700&amp;display=swap" rel="stylesheet" />
-  <style>
-    @keyframes tick {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-  </style>
 </head>
-<body class="dark:bg-gradient-to-b from-gray-800 to-transparent bg-gray-200 dark:bg-black bg-opacity-25 bg-fixed text-gray-600 font-mono font-hairline text-center">
+<body class="dark:bg-gradient-to-b from-gray-800 to-transparent bg-gray-200 dark:bg-transparent bg-fixed text-gray-600 font-mono font-hairline text-center">
 
   <main class="w-full h-screen flex flex-col items-center justify-center">
     <section class="w-full max-w-screen-xl flex">
@@ -70,13 +62,13 @@
     </section>
     <section class="mx-auto w-full max-w-screen-xl text-gray-700">
       <ul class="py-12 lg:text-4xl font-bold flex items-center">
-        <li class="pl-12 hover:text-white opacity-75 transition duration-300" title="Internet/Beat Time">
+        <li class="pl-12 hover:(text-gray-400) dark:(hover:(text-white)) opacity-75 transition duration-300" title="Internet/Beat Time">
           <div class="internet pl-5 flex items-center justify-center">
             <small class="mr-1 text-blue-400 text-lg">@</small>
             <b class="beats">&nbsp;</b>
           </div>
         </li>
-        <li class="ml-auto pr-12 hover:text-white transition duration-300">
+        <li class="ml-auto pr-12 hover:(text-gray-400) dark:(hover:(text-white)) transition duration-300">
           <ul class="date pr-5 flex">
             <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Month">
               <b class="date-m">&nbsp;</b>
@@ -148,7 +140,7 @@
     }
 
     var binary = function(n,t) {
-      const tickOn = ['bg-blue-400', 'on'];
+      const tickOn = ['bg-blue-400', 'animate-tick'];
       const tickOff = ['bg-gray-500', 'bg-opacity-25'];
       if(n == 1) {
         $_('.'+t+'-1', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
@@ -208,9 +200,9 @@
   </script>
 
   <script type="module">
-    import {tw, setup, silent} from "https://cdn.skypack.dev/twind/shim"
-    import {css, theme, apply} from "https://cdn.skypack.dev/twind/css"
-    import * as colors from "https://cdn.skypack.dev/twind/colors"
+    import {tw, setup, silent} from "https://cdn.skypack.dev/pin/twind@v0.16.11-QeLZmrfZsMzGLVRytSNH/mode=imports,min/optimized/twind/shim.js"
+    import {css, theme, apply} from "https://cdn.skypack.dev/pin/twind@v0.16.11-QeLZmrfZsMzGLVRytSNH/mode=imports,min/optimized/twind/css.js"
+    import * as colors from "https://cdn.skypack.dev/pin/twind@v0.16.11-QeLZmrfZsMzGLVRytSNH/mode=imports,min/optimized/twind/colors.js"
     setup({
       mode: silent,
       theme: {
@@ -227,13 +219,21 @@
             '9xl': ['9rem', { lineHeight: '1' }],
             '10xl': ['10rem', { lineHeight: '1' }],
           },
+          keyframes: {
+            tick: {
+              '0%, 100%': { transform: 'scale(1)' },
+              '50%': { transform: 'scale(1.1)' },
+            },
+          },
+          animation: {
+            'tick': 'tick .33s ease-in-out',
+          },
         },
       },
     })
     tw(() => ({
       '@global': {
         ':root v-cloak': apply('hidden'),
-        '.tick.on': { 'animation': '.33s tick' },
       }
     }))
   </script>
