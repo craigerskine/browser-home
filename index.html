@@ -233,7 +233,7 @@
     })
     tw(() => ({
       '@global': {
-        ':root v-cloak': apply('hidden'),
+        ':root [v-cloak]': { '@apply': 'hidden', },
       }
     }))
   </script>
