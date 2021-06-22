@@ -10,77 +10,76 @@
 </head>
 <body class="dark:bg-gradient-to-b from-gray-800 to-transparent bg-gray-200 dark:bg-transparent bg-fixed text-gray-600 font-mono font-hairline text-center">
 
-  <main class="w-full h-screen flex flex-col items-center justify-center">
-    <section class="w-full max-w-screen-xl flex">
-      <div class="m-auto p-4 w-full">
-        <h1 class="time p-4 w-full text-5xl lg:text-10xl leading-none flex items-center justify-between">
-          <span class="hours w-64 text-center"></span>
-          <span class="minutes w-64 text-center"></span>
-          <span class="seconds w-64 text-center"></span>
-          <!-- <span class="milliseconds w-64 text-center"></span> -->
-        </h1>
-        <ul class="binary py-8 px-4 w-full flex justify-between">
-          <li class="px-2 lg:px-8 w-full lg:w-64 flex items-end justify-center">
-            <ul class="hour-1 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
-              <li class="tick hrs-1-1 w-full h-1 transition duration-75"></li>
-            </ul>
-            <ul class="hour-2 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
-              <li class="tick hrs-2-8 w-full h-1 transition duration-75"></li>
-              <li class="tick hrs-2-4 w-full h-1 transition duration-75"></li>
-              <li class="tick hrs-2-2 w-full h-1 transition duration-75"></li>
-              <li class="tick hrs-2-1 w-full h-1 transition duration-75"></li>
-            </ul>
-          </li>
-          <li class="px-2 lg:px-8 w-full lg:w-64 flex items-end justify-center">
-            <ul class="minute-1 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
-              <li class="tick min-1-4 w-full h-1 transition duration-75"></li>
-              <li class="tick min-1-2 w-full h-1 transition duration-75"></li>
-              <li class="tick min-1-1 w-full h-1 transition duration-75"></li>
-            </ul>
-            <ul class="minute-2 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
-              <li class="tick min-2-8 w-full h-1 transition duration-75"></li>
-              <li class="tick min-2-4 w-full h-1 transition duration-75"></li>
-              <li class="tick min-2-2 w-full h-1 transition duration-75"></li>
-              <li class="tick min-2-1 w-full h-1 transition duration-75"></li>
-            </ul>
-          </li>
-          <li class="px-2 lg:px-8 w-full lg:w-64 flex items-end justify-center">
-            <ul class="second-1 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
-              <li class="tick sec-1-4 w-full h-1 transition duration-75"></li>
-              <li class="tick sec-1-2 w-full h-1 transition duration-75"></li>
-              <li class="tick sec-1-1 w-full h-1 transition duration-75"></li>
-            </ul>
-            <ul class="second-2 px-1 lg:px-6 w-full lg:w-32 flex flex-col space-y-2">
-              <li class="tick sec-2-8 w-full h-1 transition duration-75"></li>
-              <li class="tick sec-2-4 w-full h-1 transition duration-75"></li>
-              <li class="tick sec-2-2 w-full h-1 transition duration-75"></li>
-              <li class="tick sec-2-1 w-full h-1 transition duration-75"></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="mx-auto w-full max-w-screen-xl text-gray-700">
-      <ul class="py-12 lg:text-4xl font-bold flex items-center">
-        <li class="pl-12 hover:(text-gray-400) dark:(hover:(text-white)) opacity-75 transition duration-300" title="Internet/Beat Time">
-          <div class="internet pl-5 flex items-center justify-center">
-            <small class="mr-1 text-blue-400 text-lg">@</small>
-            <b class="beats">&nbsp;</b>
-          </div>
+  <main class="w-full h-screen flex flex-col divide(y gray-500 opacity-10)">
+    <section class="clock w-full h-full flex-1 flex flex-col justify-center">
+      <h1 class="time w-full text-5xl md:text-[calc(5vw+5vh+.5vmin)] leading-none flex divide(x gray-500 opacity-10)">
+        <span class="hours w-full flex-1"></span>
+        <span class="minutes w-full flex-1"></span>
+        <span class="seconds w-full flex-1"></span>
+        <!-- <span class="milliseconds w-64"></span> -->
+      </h1>
+      <ul class="binary-digits w-full flex divide(x gray-500 opacity-10)">
+        <li class="w-full py-4 lg:py-8 flex-1 flex items-end">
+          <ul class="hour-1 px-4 w-full flex-1 flex flex-col space-y-2">
+            <li class="tick hrs-1-2 ml-auto w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick hrs-1-1 ml-auto w-4 h-1 rounded-full transition-all duration-100"></li>
+          </ul>
+          <ul class="hour-2 px-4 w-full flex-1 flex flex-col space-y-2">
+            <li class="tick hrs-2-8 w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick hrs-2-4 w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick hrs-2-2 w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick hrs-2-1 w-4 h-1 rounded-full transition-all duration-100"></li>
+          </ul>
         </li>
-        <li class="ml-auto pr-12 hover:(text-gray-400) dark:(hover:(text-white)) transition duration-300">
-          <ul class="date pr-5 flex">
-            <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Month">
-              <b class="date-m">&nbsp;</b>
-              <sup class="date-mm ml-2 text-blue-400 text-xs">&nbsp;</sup>
+        <li class="w-full py-4 lg:py-8 flex-1 flex items-end">
+          <ul class="minute-1 px-4 w-full flex-1 flex flex-col space-y-2">
+            <li class="tick min-1-4 ml-auto w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick min-1-2 ml-auto w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick min-1-1 ml-auto w-4 h-1 rounded-full transition-all duration-100"></li>
+          </ul>
+          <ul class="minute-2 px-4 w-full flex-1 flex flex-col space-y-2">
+            <li class="tick min-2-8 w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick min-2-4 w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick min-2-2 w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick min-2-1 w-4 h-1 rounded-full transition-all duration-100"></li>
+          </ul>
+        </li>
+        <li class="w-full py-4 lg:py-8 flex-1 flex items-end">
+          <ul class="second-1 px-4 w-full flex-1 flex flex-col space-y-2">
+            <li class="tick sec-1-4 ml-auto w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick sec-1-2 ml-auto w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick sec-1-1 ml-auto w-4 h-1 rounded-full transition-all duration-100"></li>
+          </ul>
+          <ul class="second-2 px-4 w-full flex-1 flex flex-col space-y-2">
+            <li class="tick sec-2-8 w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick sec-2-4 w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick sec-2-2 w-4 h-1 rounded-full transition-all duration-100"></li>
+            <li class="tick sec-2-1 w-4 h-1 rounded-full transition-all duration-100"></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="misc w-full text-gray-700 flex flex-col justify-center">
+      <ul class="font-bold flex lg:text-4xl divide(x gray-500 opacity-10)">
+        <li class="py-4 lg:py-32 w-1/3 transition duration-300 hover:(text-gray-400) dark:(hover:(text-gray-300))" title="Internet/Beat Time">
+          <h4 class="internet pl-5 flex items-center justify-center">
+            <sup class="mr-2 text-sm uppercase font-black opacity-75">@</sup>
+            <b class="beats font-normal">&nbsp;</b>
+          </h4>
+        </li>
+        <li class="py-4 lg:py-32 w-full flex-1 transition duration-300 hover:(text-gray-400) dark:(hover:(text-gray-300))">
+          <ul class="date flex">
+            <li class="flex-1 flex items-center justify-center" title="Month">
+              <b class="date-m font-normal">&nbsp;</b>
+              <sup class="date-mm ml-2 text-xs uppercase opacity-75">&nbsp;</sup>
             </li>
-            <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Day">
-              <b class="date-d">&nbsp;</b>
-              <sup class="date-dd ml-2 text-blue-400 text-xs">&nbsp;</sup>
+            <li class="flex-1 flex items-center justify-center" title="Day">
+              <b class="date-d font-normal">&nbsp;</b>
+              <sup class="date-dd ml-2 text-xs uppercase opacity-75">&nbsp;</sup>
             </li>
-            <li class="p-4 xl:p-8 flex-1 flex items-center justify-center" title="Year">
-              <b class="date-y">&nbsp;</b>
-              <sup class="date-yy ml-2 text-blue-400 text-xs">AD</sup>
+            <li class="flex-1 flex items-center justify-center" title="Year">
+              <b class="date-y font-normal">&nbsp;</b>
+              <sup class="date-yy ml-2 text-xs uppercase opacity-75">AD</sup>
             </li>
           </ul>
         </li>
@@ -141,7 +140,7 @@
 
     var binary = function(n,t) {
       const tickOn = ['bg-blue-400', 'animate-tick'];
-      const tickOff = ['bg-gray-500', 'bg-opacity-25'];
+      const tickOff = ['ring-1', 'ring-gray-500', 'ring-opacity-25'];
       if(n == 1) {
         $_('.'+t+'-1', function(e){e.classList.add(...tickOn); e.classList.remove(...tickOff)});
         $_('.'+t+'-2', function(e){e.classList.add(...tickOff); e.classList.remove(...tickOn)});
